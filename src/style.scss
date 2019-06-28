@@ -1,0 +1,65 @@
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
+
+$main-color: #3F51B5;
+$body-color-text: #555;
+$heading-color: #222;
+$font_family: 'Josefin Sans', sans-serif;
+$page_width: 980px;
+
+html {
+    font-family: $font_family;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: $heading-color;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="passworld"]{
+    padding: 6px;
+    border-radius: 1px;
+    border: solid #dedede;
+    border-width: 0 0 1px 0;
+    outline: none;
+    background: #fafafa;
+    &:hover,
+    &:focus{
+        border-color: $main-color;
+    }
+}
+
+#page{
+    padding: 30px;
+    color: $body-color-text;
+    width: $page_width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.heading-wrap{
+    margin-bottom: 30px;
+}
+
+.group-field{
+    display: inline-block;
+    vertical-align: top;
+    label{
+        margin-right: 4px;
+    }
+}
+
+#grid-1{
+    .furygrid-item{
+        font-size: 0;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        line-height: 0;
+        font-size: 0;
+    }
+}
