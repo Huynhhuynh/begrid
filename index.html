@@ -14,44 +14,46 @@
 <body>
     <div id="page">
         <div class="heading-wrap">
-            <p><u><strong>BeGrid</strong></u> great liblary use <a href="https://isotope.metafizzy.co/" target="_blank">Isotope masonry layout</a> - Advandce options multiple columns, spacings & support responsive ⚡️,</p>
+            <p><strong>BeGrid</strong> great liblary use <a href="https://isotope.metafizzy.co/" target="_blank">Isotope masonry layout</a> - Advandce options multiple columns, spacings & support responsive ⚡️,</p>
             <div class="group-field">
                 <label for="g-columns">Support multiple columns</label>
-                (default: <input id="g-columns" type="number" value="4" min="1" max="12" />)
+                (default: <input id="g-columns" type="number" value="3" min="1" max="12" />)
             </div>
             <div class="group-field">
                 <label for="g-spacing">& spacing between grid items</label>
                 (default: <input id="g-spacing" type="number" value="24" min="0" max="50" /> px)
             </div>
 
-            <p>Photo: <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a></p>
+            <p>Photo: <a href="https://dribbble.com" target="_blank">https://dribbble.com</a></p>
         </div>
         <div id="grid-1">
             <div class="item-sizer"></div>
             <div class="item-gutter-sizer"></div>
-            <div class="item"><img src="./images/image-1.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-2.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-3.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-4.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-5.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-6.jpeg" alt="#"></div>
-            <div class="item"><img src="./images/image-7.jpeg" alt="#"></div>
+            <div class="item"><img src="./images/1.png" alt="#"></div>
+            <div class="item"><img src="./images/2.png" alt="#"></div>
+            <div class="item"><img src="./images/3.png" alt="#"></div>
+            <div class="item"><img src="./images/4.png" alt="#"></div>
+            <div class="item"><img src="./images/5.png" alt="#"></div>
+            <div class="item"><img src="./images/6.png" alt="#"></div>
+            <div class="item"><img src="./images/7.png" alt="#"></div>
+            <div class="item"><img src="./images/8.jpg" alt="#"></div>
         </div>
     </div>
 
     <script src="dist/begrid.min.js"></script>
     <script>
         var body = $( 'body' );
-        var Grid = new window.BeGrid({
+        var Grid = new window.BeGrid( {
             El: document.getElementById( 'grid-1' ),
-        });
+            Col: 3,
+        } );
 
         body.on( {
             '__update_layout' ( e ) {
 
                 Grid.GetGrid().trigger('__refresh', [{
-                    Col : $('input#g-columns').val(),
-                    Space : $('input#g-spacing').val(),
+                    Col: $('input#g-columns').val(),
+                    Space: $('input#g-spacing').val(),
                 }])
             }
         } )

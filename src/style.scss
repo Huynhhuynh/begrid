@@ -38,6 +38,7 @@ input[type="passworld"]{
     width: $page_width;
     max-width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .heading-wrap{
@@ -53,7 +54,7 @@ input[type="passworld"]{
 }
 
 #grid-1{
-    .furygrid-item{
+    .item{
         font-size: 0;
     }
     img{

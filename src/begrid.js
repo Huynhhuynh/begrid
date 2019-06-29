@@ -70,7 +70,7 @@
     const BeGrid = function( opts ) {
 
         // Set options
-        const Options = this._options(opts);
+        const Options = this._options( opts );
         const grid = $( Options.El );
         const RandClassName = 'begrid-' + CreateRandomKey();
 
@@ -96,6 +96,7 @@
 
         // trigger event
         this._triggerEvent();
+        grid.trigger( '__responsive.begrid', [w.innerWidth] );
 
         // window resize
         $( w ).off( '.begrid_resize' ).on( 'resize.begrid_resize', function(e) {
