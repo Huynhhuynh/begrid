@@ -1,6 +1,8 @@
 node_modules/*
 
+!node_modules/jquery
 !node_modules/jquery/dist
+!node_modules/isotope-layout
 !node_modules/isotope-layout/dist
 
 .DS_Store
